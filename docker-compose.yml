@@ -1,0 +1,24 @@
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: news-backend
+    ports:
+      - '8000:8000'
+    environment:
+      - API_KEY=4e5da786-f445-4925-99e6-2176abe06408
+      - NYT_API_KEY=pCueqJQ13lBvLH9TOBkDSI6etokIiG4E
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: news-frontend
+    ports:
+      - '80:80'
+    depends_on:
+      - backend
+    restart: unless-stopped

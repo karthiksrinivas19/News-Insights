@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>News Insights Dashboard</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>News Insights</h1>
+    <p class="subtitle">Real-Time Analysis</p>
+
+    <div style="text-align: center; margin-bottom: 20px; animation: fadeInUp 0.8s ease 0.15s backwards;">
+      <button id="fetch-btn" style="padding: 18px 50px; font-size: 0.8rem;">Fetch New Articles</button>
+      <p id="fetch-status" style="margin-top: 12px; font-size: 0.85rem; color: #666; letter-spacing: 1px; min-height: 20px;"></p>
+    </div>
+
+    <select id="source-filter" title="Filter by Source" style="margin: 0 auto 40px auto; display: block;"></select>
+
+    <div class="stats-grid">
+      <div class="stat-card" id="summary">
+        <h2>Sentiment</h2>
+        <div class="loading">Loading</div>
+      </div>
+
+      <div class="stat-card" id="topics">
+        <h2>Topics</h2>
+        <div class="loading">Loading</div>
+      </div>
+    </div>
+
+    <h2 class="section-title">Articles</h2>
+    <div class="articles-grid" id="articles">
+      <div class="loading">Loading</div>
+    </div>
+
+    <div class="pagination">
+      <button id="prev-btn" disabled>Previous</button>
+      <span class="page-info" id="page-info">Page 1</span>
+      <button id="next-btn" disabled>Next</button>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

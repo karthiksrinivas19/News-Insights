@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+requests
+sqlalchemy
+transformers
+torch
+vaderSentiment
+python-multipart
+scikit-learn
